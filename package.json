@@ -10,6 +10,8 @@
     "license": "SEE LICENSE IN README.md",
     "type": "module",
     "scripts": {
+        "build": "cd apps/web && pnpm build",
+        "start": "cd apps/web && pnpm start",
         "i18n": "pnpm -r i18n",
         "i18n:sort": "pnpm -r i18n:sort",
         "i18n:lint": "pnpm -r i18n:lint",
