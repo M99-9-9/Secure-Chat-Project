@@ -1,7 +1,7 @@
 {
   "version": 2,
-  "buildCommand": "pnpm install --frozen-lockfile && cd apps/web && pnpm build --outdir ../../webapp",
-  "outputDirectory": "webapp",
+  "buildCommand": "pnpm install --frozen-lockfile && pnpm build",
+  "outputDirectory": "apps/web/webapp",
   "public": true,
   "cleanUrls": true,
   "env": {
