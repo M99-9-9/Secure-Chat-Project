@@ -2,7 +2,7 @@
     "name": "element-web-monorepo",
     "version": "0.0.0",
     "description": "Element: the future of secure communication",
-    "author": "New Vector Ltd.",
+    "author": "محمد هزاع الحميري",
     "repository": {
         "type": "git",
         "url": "https://github.com/element-hq/element-web"

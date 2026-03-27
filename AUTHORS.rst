@@ -1,6 +1,8 @@
-Vector is written mainly by the Vector team, building upon the Matrix React
-SDK. Vector also welcomes external contributions. Third party contributors
-include:
+منصة الاتصالات الآمنة المشفرة تم تطويرها بواسطة **محمد هزاع الحميري** كمشروع تخرج في الأمن السيبراني، وتم بناؤها على أساس Element Web و Matrix React SDK. هذا المشروع يشمل العديد من التحسينات والتخصيصات، بما في ذلك ثيم واتساب العنابي والتشفير الشامل.
+
+**Developer:** محمد هزاع الحميري (Muhammad Hezaa Al-Hamri)
+
+المشروع يرحب بالمساهمات الخارجية. المساهمون الأصليون في Element Web يشملون:
 
 * Nolan Darilek (https://github.com/ndarilek)
   Accessibility and semantic markup contributions

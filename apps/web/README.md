@@ -1,3 +1,13 @@
+# منصة الاتصالات الآمنة المشفرة - Element Web
+
+**Developer:** محمد هزاع الحميري  
+**Project:** Secure Encrypted Communications Platform (SECP)  
+**Type:** Cybersecurity Graduation Project
+
+هذا هو المكون الـ Web من منصة الاتصالات الآمنة المشفرة، والذي يوفر واجهة مستخدم آمنة وسهلة الاستخدام للتواصل المشفر بالكامل.
+
+---
+
 # Important Security Notes
 
 ## Separate domains

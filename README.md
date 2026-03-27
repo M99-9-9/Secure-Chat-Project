@@ -7,10 +7,13 @@
 [![Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=element-web&metric=vulnerabilities)](https://sonarcloud.io/summary/new_code?id=element-web)
 [![Bugs](https://sonarcloud.io/api/project_badges/measure?project=element-web&metric=bugs)](https://sonarcloud.io/summary/new_code?id=element-web)
 
-# Element
+# منصة اتصالات آمنة مشفرة
 
-Element (formerly known as Vector and Riot) is a Matrix web & desktop client built using the [Matrix
-JS SDK](https://github.com/matrix-org/matrix-js-sdk).
+منصة اتصالات آمنة مشفرة (Secure Encrypted Communications Platform) مطورة بواسطة **محمد هزاع الحميري** - مشروع تخرج في الأمن السيبراني. تم بناؤها على أساس Element Web و Matrix JS SDK وتتميز بثيم واتساب العنابي وتشفير من طرف إلى طرف كامل.
+
+**Developer:** محمد هزاع الحميري  
+**Project Type:** Graduation Project - Cybersecurity  
+**Built on:** [Matrix JS SDK](https://github.com/matrix-org/matrix-js-sdk)
 
 # Supported Environments
 
