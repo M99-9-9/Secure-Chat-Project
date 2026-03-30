@@ -1,9 +1,17 @@
 {
   "version": 2,
-  "buildCommand": "pnpm install --frozen-lockfile && pnpm build",
-  "outputDirectory": "apps/web/webapp",
+  "buildCommand": "pnpm install && nx build web && (cp -r apps/web/webapp/* . || true)",
+  "outputDirectory": ".",
   "public": true,
   "cleanUrls": true,
+  "trailingSlash": false,
+  "framework": "other",
+  "nodeVersion": "22.x",
+  "installCommand": "pnpm install --no-frozen-lockfile",
+  "buildEnvironment": {
+    "NODE_ENV": "production",
+    "NODE_OPTIONS": "--max-old-space-size=4096"
+  },
   "env": {
     "NODE_ENV": "production"
   },
@@ -11,6 +19,13 @@
     {
       "source": "/(.*)",
       "destination": "/index.html"
+    }
+  ],
+  "redirects": [
+    {
+      "source": "/index.html",
+      "destination": "/",
+      "permanent": false
     }
   ],
   "headers": [
@@ -28,6 +43,14 @@
         {
           "key": "X-Frame-Options",
           "value": "SAMEORIGIN"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        },
+        {
+          "key": "Permissions-Policy",
+          "value": "geolocation=(), microphone=(), camera=()"
         }
       ]
     },
@@ -37,6 +60,15 @@
         {
           "key": "Cache-Control",
           "value": "no-cache, must-revalidate"
+        }
+      ]
+    },
+    {
+      "source": "/bundles/**/*",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
         }
       ]
     }

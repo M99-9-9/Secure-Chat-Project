@@ -1,0 +1,46 @@
+# Multi-stage build for Element Web on Vercel
+FROM node:22-alpine AS builder
+
+WORKDIR /app
+
+# Install pnpm
+RUN npm install -g pnpm@10.32.1
+
+# Copy package files
+COPY pnpm-lock.yaml package.json ./
+COPY apps/web/package.json apps/web/
+COPY apps/web/pnpm-lock.yaml apps/web/ 2>/dev/null || true
+
+# Install dependencies
+RUN pnpm install --no-frozen-lockfile
+
+# Copy entire project
+COPY . .
+
+# Set environment variables
+ENV NODE_ENV=production
+ENV NODE_OPTIONS="--max-old-space-size=4096"
+
+# Run prebuild tasks
+WORKDIR /app/apps/web
+RUN pnpm run prebuild:module_system || pnpm exec node module_system/scripts/install.ts
+RUN pnpm run prebuild:rethemendex || echo "Rethemendex optional"
+
+# Build
+WORKDIR /app
+RUN pnpm build
+
+# Production stage
+FROM node:22-alpine
+
+WORKDIR /app
+
+# Copy only the built files
+COPY --from=builder /app/apps/web/webapp ./public
+
+# Simple HTTP server
+RUN npm install -g http-server
+
+EXPOSE 8080
+
+CMD ["http-server", "public", "-p", "8080", "-c-1"]
