@@ -1,7 +1,7 @@
 {
-    "name": "element-web",
+    "name": "vault",
     "version": "1.12.12",
-    "description": "منصة اتصالات آمنة مشفرة - Secure Encrypted Communications Platform",
+    "description": "Vault - Secure Encrypted Communications Platform",
     "author": "محمد هزاع الحميري",
     "repository": {
         "type": "git",

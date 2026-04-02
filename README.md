@@ -7,9 +7,9 @@
 [![Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=element-web&metric=vulnerabilities)](https://sonarcloud.io/summary/new_code?id=element-web)
 [![Bugs](https://sonarcloud.io/api/project_badges/measure?project=element-web&metric=bugs)](https://sonarcloud.io/summary/new_code?id=element-web)
 
-# منصة اتصالات آمنة مشفرة
+# Vault - Secure Communications Platform
 
-منصة اتصالات آمنة مشفرة (Secure Encrypted Communications Platform) مطورة بواسطة **محمد هزاع الحميري** - مشروع تخرج في الأمن السيبراني. تم بناؤها على أساس Element Web و Matrix JS SDK وتتميز بثيم واتساب العنابي وتشفير من طرف إلى طرف كامل.
+**Vault** is a secure encrypted communications platform developed by **محمد هزاع الحميري** - a cybersecurity graduation project. Built on top of Element Web and Matrix JS SDK with end-to-end encryption and advanced security features.
 
 **Developer:** محمد هزاع الحميري  
 **Project Type:** Graduation Project - Cybersecurity  
