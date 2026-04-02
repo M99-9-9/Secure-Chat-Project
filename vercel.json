@@ -1,5 +1,5 @@
 {
-  "buildCommand": "cd apps/web && pnpm install && pnpm build",
+  "buildCommand": "pnpm install && pnpm --filter=@element-hq/web build",
   "outputDirectory": "apps/web/webapp",
   "framework": "other",
   "env": {
