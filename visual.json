@@ -1,0 +1,59 @@
+{
+  "version": "1.0.0",
+  "projectName": "Secure-Chat-Project",
+  "description": "تطبيق دردشة آمن قائم على Element",
+  "buildConfiguration": {
+    "buildCommand": "pnpm install && pnpm --filter=@element-hq/web build",
+    "outputDirectory": "apps/web/webapp",
+    "framework": "other",
+    "environment": {
+      "CI": "true"
+    }
+  },
+  "deployment": {
+    "provider": "vercel",
+    "regions": ["default"],
+    "previewDeployments": true
+  },
+  "performance": {
+    "caching": {
+      "default": "public, max-age=3600, must-revalidate",
+      "html": "no-cache, must-revalidate"
+    },
+    "security": {
+      "noSniff": true,
+      "frameOptions": "SAMEORIGIN"
+    }
+  },
+  "workspace": {
+    "type": "monorepo",
+    "packageManager": "pnpm",
+    "workspaces": [
+      "apps/web",
+      "packages/*"
+    ]
+  },
+  "apiConfiguration": {
+    "functions": {
+      "api/**/*.ts": {
+        "memory": 1024,
+        "maxDuration": 30
+      }
+    },
+    "rewrites": [
+      {
+        "source": "/:path*",
+        "destination": "/index.html"
+      }
+    ]
+  },
+  "buildStatus": {
+    "lastBuild": null,
+    "lastError": "NOT_FOUND - Fixed in vercel.json",
+    "status": "ready"
+  },
+  "notes": {
+    "ar": "تم إصلاح خطأ البناء. تأكد من دفع التغييرات إلى GitHub",
+    "en": "Build error fixed. Make sure to push changes to GitHub"
+  }
+}
