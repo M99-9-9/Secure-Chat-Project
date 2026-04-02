@@ -6,14 +6,10 @@
   "cleanUrls": true,
   "trailingSlash": false,
   "framework": "other",
-  "nodeVersion": "22.x",
   "installCommand": "pnpm install --no-frozen-lockfile",
-  "buildEnvironment": {
+  "env": {
     "NODE_ENV": "production",
     "NODE_OPTIONS": "--max-old-space-size=4096"
-  },
-  "env": {
-    "NODE_ENV": "production"
   },
   "rewrites": [
     {
