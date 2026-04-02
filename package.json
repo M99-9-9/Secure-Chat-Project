@@ -1,7 +1,7 @@
 {
-    "name": "element-web-monorepo",
+    "name": "vault-monorepo",
     "version": "0.0.0",
-    "description": "Element: the future of secure communication",
+    "description": "Vault: Secure Encrypted Communications Platform",
     "author": "محمد هزاع الحميري",
     "repository": {
         "type": "git",

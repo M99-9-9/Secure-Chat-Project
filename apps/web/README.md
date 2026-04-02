@@ -1,10 +1,10 @@
-# منصة الاتصالات الآمنة المشفرة - Element Web
+# Vault - Secure Communications Platform
 
 **Developer:** محمد هزاع الحميري  
-**Project:** Secure Encrypted Communications Platform (SECP)  
+**Project:** Vault - Secure Encrypted Communications Platform  
 **Type:** Cybersecurity Graduation Project
 
-هذا هو المكون الـ Web من منصة الاتصالات الآمنة المشفرة، والذي يوفر واجهة مستخدم آمنة وسهلة الاستخدام للتواصل المشفر بالكامل.
+Vault is a secure encrypted communications platform that provides a safe and user-friendly interface for fully encrypted communication.
 
 ---
 
