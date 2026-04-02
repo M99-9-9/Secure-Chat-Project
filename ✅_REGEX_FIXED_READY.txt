@@ -1,0 +1,21 @@
+تم إصلاح خطأ Regex Pattern
+=====================================
+
+المشكلة:
+  Header at index 2 has invalid `source` regular expression "/bundles/**/*"
+
+الحل:
+  تم تغيير: "/bundles/**/*" 
+  إلى:      "/bundles/(.*)"
+
+الملف المعدل:
+  vercel.json (السطر 62)
+
+الأمر للنشر:
+  git add vercel.json && git commit -m "fix: regex pattern" && git push origin develop
+
+المدة المتوقعة:
+  5 دقائق - موقعك سيكون حياً!
+
+الحالة:
+  ✅ جاهز للنشر الفوري
