@@ -2,15 +2,14 @@
   "version": 2,
   "buildCommand": "pnpm install && nx build web && (cp -r apps/web/webapp/* . || true)",
   "outputDirectory": ".",
-  "public": true,
-  "cleanUrls": true,
-  "trailingSlash": false,
-  "framework": "other",
   "installCommand": "pnpm install --no-frozen-lockfile",
   "env": {
     "NODE_ENV": "production",
     "NODE_OPTIONS": "--max-old-space-size=4096"
   },
+  "public": true,
+  "cleanUrls": true,
+  "trailingSlash": false,
   "rewrites": [
     {
       "source": "/(.*)",
