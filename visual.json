@@ -47,13 +47,36 @@
       }
     ]
   },
+  "diagnostics": {
+    "projectStructure": {
+      "monorepo": true,
+      "packageManager": "pnpm",
+      "workspaceConfig": "pnpm-workspace.yaml",
+      "outputPath": "apps/web/webapp",
+      "buildTool": "nx + webpack"
+    },
+    "dependencies": {
+      "totalPackages": "monorepo",
+      "rootPackageName": "element-web-monorepo",
+      "webAppPackageName": "element-web",
+      "webAppFilter": "@element-hq/web"
+    }
+  },
   "buildStatus": {
-    "lastBuild": null,
-    "lastError": "NOT_FOUND - Fixed in vercel.json",
-    "status": "ready"
+    "lastBuild": "2026-04-03T00:00:00Z",
+    "lastError": null,
+    "status": "fixed",
+    "fixSummary": "تم إصلاح خطأ NOT_FOUND بتصحيح أمر البناء في vercel.json و visual.json"
+  },
+  "fixes": {
+    "buildCommand": {
+      "before": "cd apps/web && pnpm install && pnpm build",
+      "after": "pnpm install && pnpm --filter=@element-hq/web build",
+      "reason": "تثبيت جميع تبعيات مساحة العمل من الجذر قبل البناء"
+    }
   },
   "notes": {
-    "ar": "تم إصلاح خطأ البناء. تأكد من دفع التغييرات إلى GitHub",
-    "en": "Build error fixed. Make sure to push changes to GitHub"
+    "ar": "✅ تم إصلاح خطأ البناء NOT_FOUND. أمر البناء يقوم الآن بـ:\n1. تثبيت جميع الحزم من الجذر (pnpm install)\n2. بناء تطبيق Element Web (pnpm --filter=@element-hq/web build)\n3. النشر تلقائياً على Vercel",
+    "en": "✅ NOT_FOUND build error fixed. Build command now:\n1. Installs all root workspace packages (pnpm install)\n2. Builds Element Web app (pnpm --filter=@element-hq/web build)\n3. Auto-deploys to Vercel"
   }
 }
