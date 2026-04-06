@@ -1,11 +1,13 @@
 {
   "version": 2,
-  "buildCommand": "pnpm install && nx build element-web && (cp -r apps/web/webapp/* . || true)",
-  "outputDirectory": ".",
-  "installCommand": "pnpm install --no-frozen-lockfile",
+  "buildCommand": "pnpm install --no-frozen-lockfile && cd apps/web && pnpm run build",
+  "outputDirectory": "apps/web/webapp",
+  "installCommand": "corepack enable && corepack prepare pnpm@10.32.1 --activate && pnpm install --no-frozen-lockfile",
+  "framework": null,
   "env": {
     "NODE_ENV": "production",
-    "NODE_OPTIONS": "--max-old-space-size=4096"
+    "NODE_OPTIONS": "--max-old-space-size=4096",
+    "COREPACK_ENABLE_AUTO_PIN": "0"
   },
   "public": true,
   "cleanUrls": true,
