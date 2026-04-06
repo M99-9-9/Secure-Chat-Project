@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "buildCommand": "pnpm install --no-frozen-lockfile && cd apps/web && pnpm run build",
-  "outputDirectory": "apps/web/webapp",
   "installCommand": "corepack enable && corepack prepare pnpm@10.32.1 --activate && pnpm install --no-frozen-lockfile",
+  "buildCommand": "cd apps/web && node module_system/scripts/install.ts ; pnpm rethemendex && pnpm exec webpack-cli --progress --mode production",
+  "outputDirectory": "apps/web/webapp",
   "framework": null,
   "env": {
     "NODE_ENV": "production",
