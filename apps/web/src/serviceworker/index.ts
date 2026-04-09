@@ -9,6 +9,7 @@ import { idbLoad } from "../utils/StorageAccess";
 import { ACCESS_TOKEN_IV, tryDecryptToken } from "../utils/tokens/tokens";
 import { buildAndEncodePickleKey } from "../utils/tokens/pickling";
 
+// Server support cache for authenticated media (MSC3916)
 const serverSupportMap: {
     [serverUrl: string]: {
         supportsAuthedMedia: boolean;
